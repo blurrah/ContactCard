@@ -15,6 +15,7 @@
 		2F8AE6261B943F780038A5A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F8AE6251B943F780038A5A5 /* Images.xcassets */; };
 		2F8AE6291B943F780038A5A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F8AE6271B943F780038A5A5 /* LaunchScreen.xib */; };
 		2F8AE6351B943F780038A5A5 /* ContactCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AE6341B943F780038A5A5 /* ContactCardTests.swift */; };
+		2F91C58E1B9D94EF001FDD93 /* UserListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F91C58D1B9D94EF001FDD93 /* UserListTableViewController.swift */; };
 		2FD8A53D1B94538E005C50DA /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8A53C1B94538E005C50DA /* SummaryViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		2F8AE62E1B943F780038A5A5 /* ContactCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactCardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F8AE6331B943F780038A5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F8AE6341B943F780038A5A5 /* ContactCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardTests.swift; sourceTree = "<group>"; };
+		2F91C58D1B9D94EF001FDD93 /* UserListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListTableViewController.swift; sourceTree = "<group>"; };
 		2FD8A53C1B94538E005C50DA /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				2F0B2DA31B98B80B00EEC738 /* SwiftyJSON.swift */,
 				2F8AE61E1B943F780038A5A5 /* AppDelegate.swift */,
 				2F8AE6221B943F780038A5A5 /* Main.storyboard */,
+				2F91C58D1B9D94EF001FDD93 /* UserListTableViewController.swift */,
 				2FD8A53C1B94538E005C50DA /* SummaryViewController.swift */,
 				2F8AE6251B943F780038A5A5 /* Images.xcassets */,
 				2F8AE6271B943F780038A5A5 /* LaunchScreen.xib */,
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F91C58E1B9D94EF001FDD93 /* UserListTableViewController.swift in Sources */,
 				2F0B2DA01B98B71800EEC738 /* RandomUserModel.swift in Sources */,
 				2F8AE61F1B943F780038A5A5 /* AppDelegate.swift in Sources */,
 				2F0B2DA41B98B80B00EEC738 /* SwiftyJSON.swift in Sources */,

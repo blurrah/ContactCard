@@ -16,17 +16,13 @@ class SummaryViewController: UIViewController, UITableViewDataSource {
     @IBOutlet var tableView: UITableView!
     
     var items: NSMutableArray = NSMutableArray()
+    var userId: Int?
     
-    // IB Actions
-    @IBAction func refreshUserButton(sender: AnyObject) {
-        loadModelData()
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        userImageOutlet.layer.cornerRadius = 20.0
+        userImageOutlet.layer.cornerRadius = userImageOutlet.frame.width / 2.0
         userImageOutlet.layer.borderColor = UIColor.whiteColor().CGColor
         userImageOutlet.layer.borderWidth = 5.0
         userImageOutlet.clipsToBounds = true
@@ -43,21 +39,19 @@ class SummaryViewController: UIViewController, UITableViewDataSource {
     func loadModelData() {
         var mixedName: String?
         
-        RandomUserModel.sharedInstance.getRandomUser( { Void in
-            mixedName = String(stringInterpolationSegment: RandomUserModel.sharedInstance.firstName!).capitalizedString + " " + String(stringInterpolationSegment: RandomUserModel.sharedInstance.lastName!).capitalizedString
-            
-            dispatch_async(dispatch_get_main_queue(), {
-                let user:JSON = JSON(RandomUserModel.sharedInstance.users[0])
-    
-                let picUrl = user["picture"]["medium"].stringValue
-                let url = NSURL(string: picUrl)
-                let data = NSData(contentsOfURL: url!)
-                
-                self.mixedNameOutlet.text = mixedName
-                self.userImageOutlet.image = UIImage(data: data!)
-            })
-        })
-    }    
+        let items = RandomUserModel.sharedInstance.users
+        let user: JSON = JSON(items[userId!])
+        
+        let picUrl = user["picture"]["medium"].stringValue
+        let url = NSURL(string: picUrl)
+        let data = NSData(contentsOfURL: url!)
+        
+        let firstName = user["name"]["first"].string
+        let lastName = user["name"]["last"].string
+        
+        self.mixedNameOutlet.text = "\(firstName!.capitalizedString) \(lastName!.capitalizedString)"
+        self.userImageOutlet.image = UIImage(data: data!)
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count

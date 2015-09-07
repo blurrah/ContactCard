@@ -46,7 +46,7 @@
                                     <constraint firstAttribute="height" constant="21" id="dNs-q1-U46"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -67,13 +67,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Contact Card" id="Fal-pN-GHl">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="dyf-1C-E6H">
-                            <connections>
-                                <action selector="refreshUserButton:" destination="BYZ-38-t0r" id="ht1-Uk-OhW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Contact Card" id="Fal-pN-GHl"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mixedNameOutlet" destination="Eyr-kN-0Wt" id="J6M-ge-oQy"/>
@@ -83,7 +77,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1116" y="345"/>
+            <point key="canvasLocation" x="1625" y="345"/>
+        </scene>
+        <!--Random Users-->
+        <scene sceneID="Vof-VH-tpp">
+            <objects>
+                <tableViewController id="Kv7-Vt-wEe" customClass="UserListTableViewController" customModule="ContactCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MrW-2p-UUO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CELL" id="XV7-TC-vfE">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XV7-TC-vfE" id="pId-nP-tk9">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Kv7-Vt-wEe" id="3k5-of-3a8"/>
+                            <outlet property="delegate" destination="Kv7-Vt-wEe" id="1gY-ql-0DZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Random Users" id="Lr9-pS-G4b">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="fc5-A3-H4d">
+                            <connections>
+                                <action selector="addUser:" destination="Kv7-Vt-wEe" id="DnQ-MO-Rge"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showDetailedView" id="idh-DP-cHt"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TU4-CJ-mXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989" y="345"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FQY-5e-lVw">
@@ -96,7 +126,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RV5-aQ-CfD"/>
+                        <segue destination="Kv7-Vt-wEe" kind="relationship" relationship="rootViewController" id="GZM-gR-kfb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ef-F9-HmK" userLabel="First Responder" sceneMemberID="firstResponder"/>

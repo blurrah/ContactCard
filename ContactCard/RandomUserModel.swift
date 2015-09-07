@@ -19,12 +19,12 @@ class RandomUserModel {
         return Singleton.instance
     }
     
-    let users: NSMutableArray = NSMutableArray()
+    let users = NSMutableArray()
     var firstName: String?
     var lastName: String?
     var fullName: String {
         get {
-            return firstName! + " " + lastName!
+            return firstName!.capitalizedString + " " + lastName!.capitalizedString
         }
     }
     
@@ -33,7 +33,9 @@ class RandomUserModel {
             let results = json["results"]
             
             for (index: String, subJson: JSON) in results {
-                self.users[0] = subJson["user"].object
+                let user: AnyObject = subJson["user"].object
+                
+                self.users.addObject(user)
                 
                 self.handleUserReceived()
                 onCompletion()
@@ -50,5 +52,10 @@ class RandomUserModel {
     
     
     
+}
+
+protocol RandomUserModelDelegate {
+    func loadingRandomUserDidStart(instance: RandomUserModel)
+    func loadingRandomUserDidEnd(instance: RandomUserModel)
 }
 
