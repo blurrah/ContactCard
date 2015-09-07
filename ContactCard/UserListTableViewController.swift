@@ -26,9 +26,11 @@ class UserListTableViewController: UITableViewController {
     }
     
     func addNewUser() {
+        LoadingOverlayController.sharedInstance.showOverlayView(navigationController?.view)
         RandomUserModel.sharedInstance.getRandomUser( { Void in
             dispatch_async(dispatch_get_main_queue(), {
-               tableView?.reloadData()
+                self.tableView?.reloadData()
+                LoadingOverlayController.sharedInstance.hideOverlayView()
             })
         })
     }
