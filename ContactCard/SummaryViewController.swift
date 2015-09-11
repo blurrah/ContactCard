@@ -37,20 +37,12 @@ class SummaryViewController: UIViewController, UITableViewDataSource {
     }
     
     func loadModelData() {
-        var mixedName: String?
+        let user = GetRandomUserController.sharedInstance.users[userId!]
         
-        let items = RandomUserModel.sharedInstance.users
-        let user: JSON = JSON(items[userId!])
+        let picture:NSData = user.userImage
         
-        let picUrl = user["picture"]["medium"].stringValue
-        let url = NSURL(string: picUrl)
-        let data = NSData(contentsOfURL: url!)
-        
-        let firstName = user["name"]["first"].string
-        let lastName = user["name"]["last"].string
-        
-        self.mixedNameOutlet.text = "\(firstName!.capitalizedString) \(lastName!.capitalizedString)"
-        self.userImageOutlet.image = UIImage(data: data!)
+        self.mixedNameOutlet.text = user.mixedName
+        self.userImageOutlet.image = UIImage(data: picture)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

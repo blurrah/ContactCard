@@ -27,7 +27,7 @@ class UserListTableViewController: UITableViewController {
     
     func addNewUser() {
         LoadingOverlayController.sharedInstance.showOverlayView(navigationController?.view)
-        RandomUserModel.sharedInstance.getRandomUser( { Void in
+        GetRandomUserController.sharedInstance.getRandomUser( { Void in
             dispatch_async(dispatch_get_main_queue(), {
                 self.tableView?.reloadData()
                 LoadingOverlayController.sharedInstance.hideOverlayView()
@@ -51,7 +51,9 @@ class UserListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        let userCount = RandomUserModel.sharedInstance.users
+        //let userCount = RandomUserModel.sharedInstance.users
+        
+        let userCount = GetRandomUserController.sharedInstance.users
         
         return userCount.count
     }
@@ -59,10 +61,12 @@ class UserListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL")
         let items = RandomUserModel.sharedInstance.users
-        let user: JSON = JSON(items[indexPath.row])
+        //let user: JSON = JSON(items[indexPath.row])
         
-        let firstName = user["name"]["first"].string
-        let lastName = user["name"]["last"].string
+        let newItems = GetRandomUserController.sharedInstance.users[indexPath.row]
+        
+        let firstName = newItems.firstName
+        let lastName = newItems.lastName
         
         // Configure the cell...
         cell.textLabel?.text = "\(firstName!.capitalizedString) \(lastName!.capitalizedString)"
