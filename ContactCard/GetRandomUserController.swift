@@ -14,14 +14,14 @@ protocol GetRandomUserDelegate {
 }
 
 class GetRandomUserController {
+    var users: [Person] = Array()
+    
     class var sharedInstance: GetRandomUserController {
         struct Singleton {
             static let instance = GetRandomUserController()
         }
         return Singleton.instance
     }
-    
-    var users: [Person] = Array()
     
     func getRandomUser(onCompletion: Void -> ()) {
         RestApiManager.sharedInstance.getRandomUser { json in
@@ -36,6 +36,5 @@ class GetRandomUserController {
             }
         }
     }
-    
 }
 

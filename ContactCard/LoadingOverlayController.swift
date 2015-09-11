@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 public class LoadingOverlayController {
-    
     var overlayView = UIView()
     var activityIndicator = UIActivityIndicatorView()
     
@@ -27,13 +26,17 @@ public class LoadingOverlayController {
         overlayView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
         activityIndicator.center = overlayView.center
+        
         overlayView.addSubview(activityIndicator)
+        
         activityIndicator.startAnimating()
+        
         view.addSubview(overlayView)
     }
     
     public func hideOverlayView() {
         activityIndicator.stopAnimating()
+        
         overlayView.removeFromSuperview()
     }
 }
