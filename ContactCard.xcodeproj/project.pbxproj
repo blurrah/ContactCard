@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2F0B2DA01B98B71800EEC738 /* GetRandomUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B2D9F1B98B71800EEC738 /* GetRandomUserController.swift */; };
-		2F0B2DA41B98B80B00EEC738 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B2DA31B98B80B00EEC738 /* SwiftyJSON.swift */; };
 		2F0B2DA61B98B95A00EEC738 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B2DA51B98B95A00EEC738 /* RestApiManager.swift */; };
+		2F53752A1BAF04C100DDCA60 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2F5375291BAF04C100DDCA60 /* Podfile */; settings = {ASSET_TAGS = (); }; };
 		2F8AE61F1B943F780038A5A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AE61E1B943F780038A5A5 /* AppDelegate.swift */; };
 		2F8AE6241B943F780038A5A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8AE6221B943F780038A5A5 /* Main.storyboard */; };
 		2F8AE6261B943F780038A5A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F8AE6251B943F780038A5A5 /* Images.xcassets */; };
@@ -19,6 +19,7 @@
 		2F91C5901B9DF03A001FDD93 /* LoadingOverlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F91C58F1B9DF03A001FDD93 /* LoadingOverlayController.swift */; };
 		2FA913A71BA32553002F0846 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA913A61BA32553002F0846 /* PersonModel.swift */; };
 		2FD8A53D1B94538E005C50DA /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8A53C1B94538E005C50DA /* SummaryViewController.swift */; };
+		510660CBF28D94D2062B89F9 /* Pods_ContactCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA80BD1A4F90336A259B33FF /* Pods_ContactCard.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +34,8 @@
 
 /* Begin PBXFileReference section */
 		2F0B2D9F1B98B71800EEC738 /* GetRandomUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRandomUserController.swift; sourceTree = "<group>"; };
-		2F0B2DA31B98B80B00EEC738 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		2F0B2DA51B98B95A00EEC738 /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
+		2F5375291BAF04C100DDCA60 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		2F8AE6191B943F780038A5A5 /* ContactCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F8AE61D1B943F780038A5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F8AE61E1B943F780038A5A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +49,9 @@
 		2F91C58F1B9DF03A001FDD93 /* LoadingOverlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingOverlayController.swift; sourceTree = "<group>"; };
 		2FA913A61BA32553002F0846 /* PersonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		2FD8A53C1B94538E005C50DA /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		9ACE9BD543088CD9CF334BAF /* Pods-ContactCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactCard.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactCard/Pods-ContactCard.release.xcconfig"; sourceTree = "<group>"; };
+		CA63D735C1AD20A848396EC4 /* Pods-ContactCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactCard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactCard/Pods-ContactCard.debug.xcconfig"; sourceTree = "<group>"; };
+		EA80BD1A4F90336A259B33FF /* Pods_ContactCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				510660CBF28D94D2062B89F9 /* Pods_ContactCard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,8 @@
 				2F8AE61B1B943F780038A5A5 /* ContactCard */,
 				2F8AE6311B943F780038A5A5 /* ContactCardTests */,
 				2F8AE61A1B943F780038A5A5 /* Products */,
+				80718886BBC433AA48631AD9 /* Pods */,
+				CE00E819F2049CA8EE854DF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,11 +97,11 @@
 			isa = PBXGroup;
 			children = (
 				2F0B2D9F1B98B71800EEC738 /* GetRandomUserController.swift */,
-				2F0B2DA31B98B80B00EEC738 /* SwiftyJSON.swift */,
 				2F8AE61E1B943F780038A5A5 /* AppDelegate.swift */,
 				2F8AE6221B943F780038A5A5 /* Main.storyboard */,
 				2F91C58F1B9DF03A001FDD93 /* LoadingOverlayController.swift */,
 				2F91C58D1B9D94EF001FDD93 /* UserListTableViewController.swift */,
+				2F5375291BAF04C100DDCA60 /* Podfile */,
 				2FD8A53C1B94538E005C50DA /* SummaryViewController.swift */,
 				2F8AE6251B943F780038A5A5 /* Images.xcassets */,
 				2F8AE6271B943F780038A5A5 /* LaunchScreen.xib */,
@@ -130,6 +137,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		80718886BBC433AA48631AD9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA63D735C1AD20A848396EC4 /* Pods-ContactCard.debug.xcconfig */,
+				9ACE9BD543088CD9CF334BAF /* Pods-ContactCard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE00E819F2049CA8EE854DF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA80BD1A4F90336A259B33FF /* Pods_ContactCard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F8AE6381B943F780038A5A5 /* Build configuration list for PBXNativeTarget "ContactCard" */;
 			buildPhases = (
+				29B5908481F1BF9F1083F827 /* Check Pods Manifest.lock */,
 				2F8AE6151B943F780038A5A5 /* Sources */,
 				2F8AE6161B943F780038A5A5 /* Frameworks */,
 				2F8AE6171B943F780038A5A5 /* Resources */,
+				026E8EE388C70B3EC8CD0556 /* Embed Pods Frameworks */,
+				4E3391B22EACB56BC43D162E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -174,7 +201,9 @@
 		2F8AE6111B943F780038A5A5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Boris Besemer";
 				TargetAttributes = {
 					2F8AE6181B943F780038A5A5 = {
@@ -212,6 +241,7 @@
 			files = (
 				2F8AE6241B943F780038A5A5 /* Main.storyboard in Resources */,
 				2F8AE6291B943F780038A5A5 /* LaunchScreen.xib in Resources */,
+				2F53752A1BAF04C100DDCA60 /* Podfile in Resources */,
 				2F8AE6261B943F780038A5A5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +255,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		026E8EE388C70B3EC8CD0556 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactCard/Pods-ContactCard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29B5908481F1BF9F1083F827 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4E3391B22EACB56BC43D162E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactCard/Pods-ContactCard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F8AE6151B943F780038A5A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -233,7 +311,6 @@
 				2F91C58E1B9D94EF001FDD93 /* UserListTableViewController.swift in Sources */,
 				2F0B2DA01B98B71800EEC738 /* GetRandomUserController.swift in Sources */,
 				2F8AE61F1B943F780038A5A5 /* AppDelegate.swift in Sources */,
-				2F0B2DA41B98B80B00EEC738 /* SwiftyJSON.swift in Sources */,
 				2FA913A71BA32553002F0846 /* PersonModel.swift in Sources */,
 				2F91C5901B9DF03A001FDD93 /* LoadingOverlayController.swift in Sources */,
 				2F0B2DA61B98B95A00EEC738 /* RestApiManager.swift in Sources */,
@@ -300,6 +377,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -364,20 +442,24 @@
 		};
 		2F8AE6391B943F780038A5A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA63D735C1AD20A848396EC4 /* Pods-ContactCard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContactCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.borisbesemer.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		2F8AE63A1B943F780038A5A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ACE9BD543088CD9CF334BAF /* Pods-ContactCard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContactCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.borisbesemer.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -396,6 +478,7 @@
 				);
 				INFOPLIST_FILE = ContactCardTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.borisbesemer.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContactCard.app/ContactCard";
 			};
@@ -411,6 +494,7 @@
 				);
 				INFOPLIST_FILE = ContactCardTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.borisbesemer.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContactCard.app/ContactCard";
 			};

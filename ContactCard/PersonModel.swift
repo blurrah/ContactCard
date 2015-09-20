@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Person {
     let firstName: String?
@@ -32,6 +33,5 @@ class Person {
         firstName = user["name"]["first"].string!
         lastName = user["name"]["last"].string!
         userImageUrl = user["picture"]["medium"].string!
-        
     }
 }

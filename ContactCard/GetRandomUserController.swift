@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 protocol GetRandomUserDelegate {
     func loadingRandomUserDidStart(instance: GetRandomUserController)
@@ -27,7 +28,7 @@ class GetRandomUserController {
         RestApiManager.sharedInstance.getRandomUser { json in
             let results = json["results"]
             
-            for (index: String, subJson: JSON) in results {
+            for (_, subJson): (String, JSON) in results {
                 let user: AnyObject = subJson["user"].object
                 
                 self.users.append(Person(person: user))

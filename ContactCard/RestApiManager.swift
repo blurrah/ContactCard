@@ -8,6 +8,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 typealias ServiceResponse = (JSON, NSError?) -> Void
 
@@ -19,7 +20,7 @@ class RestApiManager: NSObject {
         return Singleton.instance
     }
     
-    let baseUrl = "http://randomuser.me/api/"
+    let baseUrl = "https://randomuser.me/api/"
     
     func getRandomUser(onCompletion: (JSON) -> Void) {
         let route = baseUrl
@@ -35,7 +36,7 @@ class RestApiManager: NSObject {
         let session = NSURLSession.sharedSession()
         
         let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-            let json:JSON = JSON(data: data)
+            let json:JSON = JSON(data: data!)
             onCompletion(json, error)
         })
         task.resume()
