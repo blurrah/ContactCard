@@ -33,14 +33,6 @@
                                     <constraint firstAttribute="height" constant="116" id="nVv-wv-xYY"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WtB-7q-HpD">
-                                <rect key="frame" x="0.0" y="302" width="600" height="298"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="S2v-ad-7GX"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="BLt-dX-BQg"/>
-                                </connections>
-                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voornaam Achternaam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyr-kN-0Wt">
                                 <rect key="frame" x="0.0" y="231" width="600" height="21"/>
                                 <constraints>
@@ -50,6 +42,24 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHG-bM-TAn">
+                                <rect key="frame" x="20" y="289" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DOB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9u-iK-fLr">
+                                <rect key="frame" x="20" y="311" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DOB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7QJ-Yi-Xw6">
+                                <rect key="frame" x="20" y="335" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -57,14 +67,10 @@
                             <constraint firstItem="Eyr-kN-0Wt" firstAttribute="top" secondItem="jA8-iP-7AG" secondAttribute="bottom" constant="43" id="DNm-Tg-3Fd"/>
                             <constraint firstAttribute="centerX" secondItem="jA8-iP-7AG" secondAttribute="centerX" id="EdO-j4-8PH"/>
                             <constraint firstItem="s0E-z5-szW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="19" id="HAM-CY-wwb"/>
-                            <constraint firstItem="WtB-7q-HpD" firstAttribute="leading" secondItem="s0E-z5-szW" secondAttribute="leading" id="Irc-tf-8tV"/>
-                            <constraint firstItem="WtB-7q-HpD" firstAttribute="top" secondItem="Eyr-kN-0Wt" secondAttribute="bottom" constant="50" id="Zov-iJ-FQ9"/>
-                            <constraint firstItem="WtB-7q-HpD" firstAttribute="trailing" secondItem="s0E-z5-szW" secondAttribute="trailing" id="bbu-Qj-wsP"/>
                             <constraint firstItem="Eyr-kN-0Wt" firstAttribute="trailing" secondItem="s0E-z5-szW" secondAttribute="trailing" id="cHQ-pX-yf3"/>
                             <constraint firstItem="Eyr-kN-0Wt" firstAttribute="leading" secondItem="s0E-z5-szW" secondAttribute="leading" id="mZe-8y-DsK"/>
                             <constraint firstAttribute="trailing" secondItem="s0E-z5-szW" secondAttribute="trailing" id="pyR-yo-DqP"/>
                             <constraint firstItem="s0E-z5-szW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ruG-M3-eZG"/>
-                            <constraint firstAttribute="bottom" secondItem="WtB-7q-HpD" secondAttribute="bottom" id="tnT-B3-C7j"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -72,7 +78,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mixedNameOutlet" destination="Eyr-kN-0Wt" id="J6M-ge-oQy"/>
-                        <outlet property="tableView" destination="WtB-7q-HpD" id="DGU-4W-g8x"/>
                         <outlet property="userImageOutlet" destination="jA8-iP-7AG" id="opa-7B-Wm7"/>
                     </connections>
                 </viewController>

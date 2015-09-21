@@ -9,6 +9,8 @@
 import UIKit
 import XCTest
 
+@testable import ContactCard
+
 class ContactCardTests: XCTestCase {
     
     override func setUp() {
@@ -24,6 +26,10 @@ class ContactCardTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         XCTAssert(true, "Pass")
+    }
+    
+    func testExampleFunction() {
+        XCTAssertTrue(true)
     }
     
     func testPerformanceExample() {

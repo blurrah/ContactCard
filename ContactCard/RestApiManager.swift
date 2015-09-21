@@ -9,6 +9,7 @@
 
 import Foundation
 import SwiftyJSON
+import Alamofire
 
 typealias ServiceResponse = (JSON, NSError?) -> Void
 

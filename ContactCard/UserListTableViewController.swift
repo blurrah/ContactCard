@@ -27,7 +27,7 @@ class UserListTableViewController: UITableViewController {
     
     func addNewUser() {
         LoadingOverlayController.sharedInstance.showOverlayView(navigationController?.view)
-        GetRandomUserController.sharedInstance.getRandomUser( { Void in
+        RandomUserStore.sharedInstance.getRandomUser( { Void in
             dispatch_async(dispatch_get_main_queue(), {
                 self.tableView?.reloadData()
                 LoadingOverlayController.sharedInstance.hideOverlayView()
@@ -52,14 +52,14 @@ class UserListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if editingStyle == UITableViewCellEditingStyle.Delete {
-            GetRandomUserController.sharedInstance.users.removeAtIndex(indexPath.row)
+            RandomUserStore.sharedInstance.users.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        let userCount = GetRandomUserController.sharedInstance.users
+        let userCount = RandomUserStore.sharedInstance.users
         
         return userCount.count
     }
@@ -67,7 +67,7 @@ class UserListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL")
         
-        let items = GetRandomUserController.sharedInstance.users[indexPath.row]
+        let items = RandomUserStore.sharedInstance.users[indexPath.row]
         
         // Configure the cell...
         cell.textLabel?.text = items.mixedName
