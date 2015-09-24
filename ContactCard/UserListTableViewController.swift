@@ -23,6 +23,7 @@ class UserListTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        RandomUserStore.sharedInstance.getStoredUsers()
     }
     
     func addNewUser() {
@@ -68,9 +69,11 @@ class UserListTableViewController: UITableViewController {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL")
         
         let items = RandomUserStore.sharedInstance.users[indexPath.row]
+        let firstName = items.valueForKey("firstName") as? String
+        let lastName = items.valueForKey("lastName") as? String
         
         // Configure the cell...
-        cell.textLabel?.text = items.mixedName
+        cell.textLabel?.text = "\(firstName!.capitalizedString) \(lastName!.capitalizedString)"
         
         return cell
     }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 class SummaryViewController: UIViewController, UITableViewDataSource {
     
@@ -39,10 +38,12 @@ class SummaryViewController: UIViewController, UITableViewDataSource {
     
     func loadModelData() {
         let user = RandomUserStore.sharedInstance.users[userId!]
+        let username = user.valueForKey("username") as! String
+        let firstName = user.valueForKey("firstName") as! String
+        let lastName = user.valueForKey("lastName") as! String
+        let picture:NSData = (user.valueForKey("picture") as? NSData)!
         
-        let picture:NSData = user.userImage
-        
-        self.mixedNameOutlet.text = user.mixedName
+        self.mixedNameOutlet.text = "\(firstName!.capitalizedString) \(lastName!.capitalizedString) (\(username))"
         self.userImageOutlet.image = UIImage(data: picture)
     }
     

@@ -21,6 +21,7 @@
 		2F91C5901B9DF03A001FDD93 /* LoadingOverlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F91C58F1B9DF03A001FDD93 /* LoadingOverlayController.swift */; };
 		2FA913A71BA32553002F0846 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA913A61BA32553002F0846 /* PersonModel.swift */; };
 		2FD8A53D1B94538E005C50DA /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8A53C1B94538E005C50DA /* SummaryViewController.swift */; };
+		2FE1A4011BB158B400A5BC84 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE1A4001BB158B400A5BC84 /* CoreDataManager.swift */; settings = {ASSET_TAGS = (); }; };
 		510660CBF28D94D2062B89F9 /* Pods_ContactCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA80BD1A4F90336A259B33FF /* Pods_ContactCard.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		2F91C58F1B9DF03A001FDD93 /* LoadingOverlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingOverlayController.swift; sourceTree = "<group>"; };
 		2FA913A61BA32553002F0846 /* PersonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		2FD8A53C1B94538E005C50DA /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		2FE1A4001BB158B400A5BC84 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		9ACE9BD543088CD9CF334BAF /* Pods-ContactCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactCard.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactCard/Pods-ContactCard.release.xcconfig"; sourceTree = "<group>"; };
 		CA63D735C1AD20A848396EC4 /* Pods-ContactCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactCard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactCard/Pods-ContactCard.debug.xcconfig"; sourceTree = "<group>"; };
 		EA80BD1A4F90336A259B33FF /* Pods_ContactCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 		2F8AE61B1B943F780038A5A5 /* ContactCard */ = {
 			isa = PBXGroup;
 			children = (
+				2FE1A4001BB158B400A5BC84 /* CoreDataManager.swift */,
 				2F53752B1BAFCE4900DDCA60 /* DataModel.xcdatamodeld */,
 				2F0B2D9F1B98B71800EEC738 /* RandomUserStore.swift */,
 				2F8AE61E1B943F780038A5A5 /* AppDelegate.swift */,
@@ -318,6 +321,7 @@
 				2F8AE61F1B943F780038A5A5 /* AppDelegate.swift in Sources */,
 				2FA913A71BA32553002F0846 /* PersonModel.swift in Sources */,
 				2F91C5901B9DF03A001FDD93 /* LoadingOverlayController.swift in Sources */,
+				2FE1A4011BB158B400A5BC84 /* CoreDataManager.swift in Sources */,
 				2F0B2DA61B98B95A00EEC738 /* RestApiManager.swift in Sources */,
 				2FD8A53D1B94538E005C50DA /* SummaryViewController.swift in Sources */,
 			);
