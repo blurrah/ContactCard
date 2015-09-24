@@ -43,7 +43,7 @@ class SummaryViewController: UIViewController, UITableViewDataSource {
         let lastName = user.valueForKey("lastName") as! String
         let picture:NSData = (user.valueForKey("picture") as? NSData)!
         
-        self.mixedNameOutlet.text = "\(firstName!.capitalizedString) \(lastName!.capitalizedString) (\(username))"
+        self.mixedNameOutlet.text = "\(firstName.capitalizedString) \(lastName.capitalizedString) (\(username))"
         self.userImageOutlet.image = UIImage(data: picture)
     }
     

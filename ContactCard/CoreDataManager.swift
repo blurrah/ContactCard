@@ -69,4 +69,21 @@ class CoreDataManager {
             print("Le error: \(error.localizedDescription)")
         }
     }
+    
+    func removeUser(id: Int) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        let user = RandomUserStore.sharedInstance.users[id]
+        
+        managedContext.deleteObject(user)
+        
+        do {
+            try managedContext.save()
+            print("Removed item with id: \(id)")
+        } catch let error as NSError {
+            print("Deletion error: \(error.localizedDescription)")
+        }
+    }
 }
