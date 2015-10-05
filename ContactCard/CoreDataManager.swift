@@ -57,8 +57,10 @@ class CoreDataManager {
         person.setValue(user.username, forKey: "username")
         person.setValue(user.firstName, forKey: "firstName")
         person.setValue(user.lastName, forKey: "lastName")
+        person.setValue(user.email, forKey: "email")
+        person.setValue(user.gender, forKey: "gender")
         person.setValue(user.userImage, forKey: "picture")
-        person.setValue(user.dob, forKey: "dob")
+        person.setValue(user.dateofbirth, forKey: "dob")
         person.setValue(user.phone, forKey: "phone")
         person.setValue(user.cell, forKey: "cell")
         

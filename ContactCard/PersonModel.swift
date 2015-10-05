@@ -27,9 +27,16 @@ class Person {
     let lastName: String?
     let email: String?
     let gender: String?
-    
     let userImageUrl: String?
-    var keyValues: [[String: String]]!
+    let dob: Double?
+    let phone: String?
+    let cell: String?
+    var mixedName: String {
+        get {
+            return firstName!.capitalizedString + " " + lastName!.capitalizedString
+        }
+    }
+    
     var userImage: NSData {
         get {
             let url: NSURL = NSURL(string: userImageUrl!)!
@@ -39,13 +46,8 @@ class Person {
         }
     }
     
-    let dob: NSDate?
-    let phone: String?
-    let cell: String?
-    var mixedName: String {
-        get {
-            return firstName!.capitalizedString + " " + lastName!.capitalizedString
-        }
+    var dateofbirth: NSDate {
+        return NSDate(timeIntervalSince1970: dob!)
     }
     
     init(person: AnyObject?) {
@@ -57,22 +59,8 @@ class Person {
         email = user["email"].string!
         gender = user["gender"].string!
         userImageUrl = user["picture"]["medium"].string!
-        dob = NSDate()
+        dob = user["dob"].doubleValue
         phone = user["phone"].string!
         cell = user["cell"].string!
-    }
-    
-    func handlePersonData(user: JSON) {
-        let currentUser = user
-        
-        for(key, subJson):(String, JSON) in currentUser {
-        
-            print("key is: \(key), value is: \(subJson)")
-            if subJson != nil {
-                let newItem = [key: subJson.string ?? ""]
-                print(newItem)
-                //keyValues.append(newItem)
-            }
-        }
     }
 }

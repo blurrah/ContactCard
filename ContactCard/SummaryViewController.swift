@@ -8,12 +8,16 @@
 
 import UIKit
 
-class SummaryViewController: UIViewController, UITableViewDataSource {
+class SummaryViewController: UIViewController {
     
     // IB Outlets
     @IBOutlet var userImageOutlet: UIImageView!
     @IBOutlet var mixedNameOutlet: UILabel!
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var emailOutlet: UILabel!
+    @IBOutlet var genderOutlet: UILabel!
+    @IBOutlet var dobOutlet: UILabel!
+    @IBOutlet var phoneOutlet: UILabel!
+    @IBOutlet var cellPhoneOutlet: UILabel!
     
     var items: NSMutableArray = NSMutableArray()
     var userId: Int?
@@ -36,26 +40,46 @@ class SummaryViewController: UIViewController, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
+    /* Entity:
+    @username: String
+    @firstName: String
+    @lastName: String
+    @email: String
+    @gender: String
+    @picture: Binary Data
+    @dob: Date
+    @phone: String
+    @cell: String
+    */
+    
+    
     func loadModelData() {
+        // Big function cuz stuff
         let user = RandomUserStore.sharedInstance.users[userId!]
         let username = user.valueForKey("username") as! String
         let firstName = user.valueForKey("firstName") as! String
         let lastName = user.valueForKey("lastName") as! String
+        let email = user.valueForKey("email") as! String
+        let gender = user.valueForKey("gender") as! String
         let picture:NSData = (user.valueForKey("picture") as? NSData)!
+        let dob = user.valueForKey("dob") as! NSDate
+        let phone = user.valueForKey("phone") as! String
+        let cell = user.valueForKey("cell") as! String
         
         self.mixedNameOutlet.text = "\(firstName.capitalizedString) \(lastName.capitalizedString) (\(username))"
         self.userImageOutlet.image = UIImage(data: picture)
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        self.emailOutlet.text = email
+        self.genderOutlet.text = gender
         
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.Value2, reuseIdentifier: nil)
+        // set up NSDate time stuff
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd/M/yyyy"
+        let dateString = dateFormatter.stringFromDate(dob)
+        self.dobOutlet.text = dateString
         
-        return cell
+        self.phoneOutlet.text = phone
+        self.cellPhoneOutlet.text = cell
+        
     }
 
     /*

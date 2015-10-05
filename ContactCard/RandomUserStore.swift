@@ -11,41 +11,6 @@ import SwiftyJSON
 import Alamofire
 import CoreData
 
-/*
-class RandomUserStore {
-    var users: [Person] = Array()
-    
-    class var sharedInstance: RandomUserStore {
-        struct Singleton {
-            static let instance = RandomUserStore()
-        }
-        return Singleton.instance
-    }
-    
-    func getRandomUser(onCompletion: Void -> ()) {
-        Alamofire.request(.GET, "https://randomuser.me/api/")
-            .validate(statusCode: 200..<300)
-            .responseJSON { (req, res, result) in
-                switch result {
-                    case .Success(let data):
-                        let jsonData = JSON(data)
-                        let results = jsonData["results"]
-                        
-                        for (_, subJson) : (String, JSON) in results {
-                            let user: AnyObject = subJson["user"].object
-                        
-                            self.users.append(Person(person: user))
-                        }
-                        onCompletion()
-                    
-                        case .Failure(_, let error):
-                            print("Request failed with error: \(error)")
-                }
-        }
-    }
-}
-*/
-
 // New Class based on Core Data
 class RandomUserStore {
     var users: [NSManagedObject] = []
